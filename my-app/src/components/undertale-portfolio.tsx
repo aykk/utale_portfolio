@@ -33,7 +33,11 @@ export function UndertalePortfolio() {
   }, [text, isTyping, currentTextIndex])
 
   const handleNext = () => {
-    if (currentTextIndex < dialogues.length - 1) {
+    if (text.length < dialogues[currentTextIndex].length) {
+      // Auto-finish current line
+      setText(dialogues[currentTextIndex])
+      setIsTyping(false)
+    } else if (currentTextIndex < dialogues.length - 1) {
       setCurrentTextIndex(currentTextIndex + 1)
       setText('')
       setIsTyping(true)
@@ -94,7 +98,7 @@ export function UndertalePortfolio() {
           <button
             onClick={handleNext}
             className="retro-button"
-            disabled={currentTextIndex === dialogues.length - 1}
+            disabled={currentTextIndex === dialogues.length - 1 && text.length === dialogues[currentTextIndex].length}
             aria-label="Next"
           >
             <ChevronRight size={24} />
