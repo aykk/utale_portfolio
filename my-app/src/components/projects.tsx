@@ -2,12 +2,14 @@
 
 import React from 'react'
 import { VT323 } from 'next/font/google'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 const vt323 = VT323({ weight: '400', subsets: ['latin'] })
 
 export function ProjectsComponent() {
+  const router = useRouter()
+
   const projects = [
     { 
       name: "Pixel Art Generator", 
@@ -41,6 +43,10 @@ export function ProjectsComponent() {
     }
   ]
 
+  const handleBackToHome = () => {
+    router.push('/?skipSplash=true')
+  }
+
   return (
     <div className={`min-h-screen bg-black text-white ${vt323.className}`}>
       <div className="container mx-auto px-4 py-8">
@@ -65,9 +71,9 @@ export function ProjectsComponent() {
           ))}
         </div>
         <div className="mt-8 text-center">
-          <Link href="/" className="retro-button inline-block">
+          <button onClick={handleBackToHome} className="retro-button">
             Back to Home
-          </Link>
+          </button>
         </div>
       </div>
       <style jsx global>{`
