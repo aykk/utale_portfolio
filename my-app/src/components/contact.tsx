@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { Home } from 'lucide-react'
 
 const vt323 = VT323({ weight: '400', subsets: ['latin'] })
 
@@ -34,7 +35,16 @@ export function ContactComponent() {
   return (
     <div className={`min-h-screen bg-black text-white ${vt323.className} flex flex-col`}>
       <div className="flex-1 flex flex-col p-8">
-        <h1 className="text-5xl text-center mb-8">Contact</h1>
+        <div className="flex justify-between items-center mb-8">
+          <button 
+            onClick={handleBackToHome}
+            className="retro-button bg-transparent p-2"
+            aria-label="Back to Home"
+          >
+            <Home size={24} />
+          </button>
+          <h1 className="text-5xl text-center flex-grow">Contact</h1>
+        </div>
         
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-2xl w-full mx-auto bg-black p-8 border-2 border-white">
@@ -95,12 +105,6 @@ export function ContactComponent() {
               <p className="mt-4 text-xl text-center text-yellow-400">{submitMessage}</p>
             )}
           </div>
-        </div>
-        
-        <div className="mt-8 text-center">
-          <button onClick={handleBackToHome} className="retro-button text-xl py-4 px-8">
-            Back to Home
-          </button>
         </div>
       </div>
       
