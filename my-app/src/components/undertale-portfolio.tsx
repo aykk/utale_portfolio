@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { VT323 } from 'next/font/google'
+import { useRouter } from 'next/navigation'
 
 const vt323 = VT323({ weight: '400', subsets: ['latin'] })
 
@@ -13,6 +14,7 @@ export function UndertalePortfolio() {
   const [evilMode, setEvilMode] = useState(false)
   const [evilStage, setEvilStage] = useState(0)
   const [isShaking, setIsShaking] = useState(false)
+  const router = useRouter()
 
   const dialogues = [
     "* Hi, I'm Andrew!",
@@ -83,6 +85,10 @@ export function UndertalePortfolio() {
     setText('')
     setIsTyping(true)
     setIsShaking(false)
+  }
+
+  const handleNavigation = (path: string) => {
+    router.push(path)
   }
 
   return (
@@ -190,13 +196,13 @@ export function UndertalePortfolio() {
         </div>
       </div>
       <nav className="mt-8 flex justify-center space-x-4">
-        <button className="retro-button w-32 h-16">
+        <button className="retro-button w-32 h-16" onClick={() => handleNavigation('/aboutme')}>
           About Me
         </button>
-        <button className="retro-button w-32 h-16">
+        <button className="retro-button w-32 h-16" onClick={() => handleNavigation('/projects')}>
           Projects
         </button>
-        <button className="retro-button w-32 h-16">
+        <button className="retro-button w-32 h-16" onClick={() => handleNavigation('/contact')}>
           Contact
         </button>
       </nav>
