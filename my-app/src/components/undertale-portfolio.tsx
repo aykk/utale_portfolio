@@ -15,16 +15,17 @@ export function UndertalePortfolio() {
   const [isShaking, setIsShaking] = useState(false)
 
   const dialogues = [
-    "* Hi, I'm Andrew.",
-    "* Welcome to my Undertale-themed website!",
-    "* I'm a student in Computer Science with a passion for designing fun, interactive websites like this one.",
-    "* My skills include web development, machine learning, and UI/UX design.",
-    "* Want to see my projects? Just select 'Projects' below!",
-    "* Feel free to contact me anytime.",
-    "* Thanks for visiting!"
+    "* Hi, I'm Andrew!",
+    "* Welcome to my Undertale-themed digital portfolio!",
+    "* I'm a student studying Computer Science at Virginia Tech. I love making fun, interactive websites like this one!",
+    "* My skills include full-stack web development, UI/UX design, and uhhhhhh...",
+    "* Anyways, want to learn more about me? Just select 'About Me' below!",
+    "* Want to see my projects? Click on 'Projects'!",
+    "* Feel free to contact me anytime!",
+    "* Thanks for visiting my website!"
   ]
 
-  const evilDialogues = ["why...", "WHY DID YOU CLICK THE BUTTON!?!?", "I told you not to..."]
+  const evilDialogues = ["why...", "WHY DID YOU CLICK THE BUTTON!?!?", "I told you not to... Hurry and go back!"]
 
   useEffect(() => {
     if (isTyping) {
@@ -190,10 +191,10 @@ export function UndertalePortfolio() {
       </div>
       <nav className="mt-8 flex justify-center space-x-4">
         <button className="retro-button w-32 h-16">
-          Projects
+          About Me
         </button>
         <button className="retro-button w-32 h-16">
-          Skills
+          Projects
         </button>
         <button className="retro-button w-32 h-16">
           Contact
