@@ -183,6 +183,7 @@ export function UndertalePortfolio() {
           display: flex;
           align-items: center;
           justify-content: center;
+          text-decoration: none;
         }
         .retro-button:hover {
           background-color: rgba(255, 255, 255, 0.2);
@@ -275,9 +276,14 @@ export function UndertalePortfolio() {
         <button className="retro-button w-32 h-16" onClick={() => handleNavigation('/contact')}>
           Contact
         </button>
-        <button className="retro-button gold-button w-32 h-16" onClick={() => handleNavigation('/resume')}>
+        <a 
+          href="https://drive.google.com/file/d/1ph89Mg0ZIviaoPFRC4N5H9PrxFWP_J1-/view?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="retro-button gold-button w-32 h-16"
+        >
           Resume
-        </button>
+        </a>
       </nav>
       <button 
         className="retro-button small-button red-button absolute bottom-4 left-4"
