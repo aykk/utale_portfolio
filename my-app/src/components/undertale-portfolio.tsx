@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
@@ -42,7 +41,7 @@ export function UndertalePortfolio({ initialSkipSplash = false }) {
   const [showSplash, setShowSplash] = useState(!initialSkipSplash)
   const [text, setText] = useState('')
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
+  const [isTyping, setIsTyping] = useState(false)
   const [evilMode, setEvilMode] = useState(false)
   const [evilStage, setEvilStage] = useState(0)
   const [isShaking, setIsShaking] = useState(false)
@@ -83,6 +82,12 @@ export function UndertalePortfolio({ initialSkipSplash = false }) {
       return () => clearTimeout(timeout)
     }
   }, [isTyping, typeText])
+
+  useEffect(() => {
+    if (!showSplash && text === '') {
+      setIsTyping(true)
+    }
+  }, [showSplash, text])
 
   const handleNext = () => {
     if (!evilMode) {
@@ -130,7 +135,7 @@ export function UndertalePortfolio({ initialSkipSplash = false }) {
     setEvilMode(false)
     setEvilStage(0)
     setText('')
-    setIsTyping(true)
+    setIsTyping(false)
     setIsShaking(false)
     setCurrentTextIndex(0)
   }
