@@ -1,10 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight, Home } from 'lucide-react'
 import { VT323 } from 'next/font/google'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 const vt323 = VT323({ weight: '400', subsets: ['latin'] })
@@ -38,10 +37,8 @@ function SplashScreen({ onComplete }: { onComplete: () => void }) {
   )
 }
 
-export function UndertalePortfolio() {
-  const searchParams = useSearchParams()
-  const skipSplash = searchParams.get('skipSplash') === 'true'
-  const [showSplash, setShowSplash] = useState(!skipSplash)
+export function UndertalePortfolio({ initialSkipSplash = false }) {
+  const [showSplash, setShowSplash] = useState(!initialSkipSplash)
   const [text, setText] = useState('')
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
