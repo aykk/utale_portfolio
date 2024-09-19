@@ -12,8 +12,8 @@ export function ProjectsComponent() {
 
   const projects = [
     { 
-      name: "Pixel Art Generator", 
-      description: "An AI-powered tool that creates pixel art from text descriptions.",
+      name: "3Dera", 
+      description: "An AI-powered experience that teaches history by transforming historical events into environments you can enter in VR!",
       image: "/images/red.png"
     },
     { 

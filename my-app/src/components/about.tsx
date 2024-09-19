@@ -19,13 +19,13 @@ export function About() {
         <h1 className="text-4xl mb-8 text-center">About Me</h1>
         <div className="border-2 border-white p-6 max-w-2xl mx-auto">
           <p className="text-xl mb-4">
-            * Greetings! I&apos;m Andrew, a Computer Science student with a passion for all things retro and pixelated.
+            * Hello! I&apos;m Andrew, a Computer Science student at Virginia Tech with a passion in web development and UI/UX design.
           </p>
           <p className="text-xl mb-4">
-            * My journey in tech began with my love for classic video games, which inspired me to create my own digital worlds.
+            * My journey in tech began with my love for classic/retro video games, which inspired me to create my own digital experiences.
           </p>
           <p className="text-xl mb-4">
-            * When I&apos;m not coding, you can find me collecting vintage consoles, participating in game jams, or attempting to speedrun my favorite 8-bit games.
+            * When I&apos;m not coding, I enjoy playing basketball, playing the electric guitar, and playing video games!.
           </p>
           <p className="text-xl">
             * Let&apos;s connect and create something awesome together!

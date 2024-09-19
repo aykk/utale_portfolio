@@ -41,7 +41,7 @@ export function ContactComponent() {
           >
             Back to Home
           </button>
-          <h1 className="text-5xl text-center">Contact</h1>
+          <h1 className="text-5xl text-center">Contact Me!</h1>
         </div>
         
         <div className="flex-1 flex flex-col justify-center">

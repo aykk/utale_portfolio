@@ -49,16 +49,18 @@ export function UndertalePortfolio({ initialSkipSplash = false }) {
 
   const dialogues = [
     "* Hi, I'm Andrew!",
-    "* Welcome to my Undertale-themed digital portfolio!",
+    "* Welcome to my digital portfolio!",
     "* I'm a student studying Computer Science at Virginia Tech. I love making fun, interactive websites like this one!",
-    "* My skills include full-stack web development, UI/UX design, and uhhhhhh...",
-    "* Anyways, want to learn more about me? Just select 'About Me' below!",
-    "* Want to see my projects? Click on 'Projects'!",
-    "* Feel free to contact me anytime!",
-    "* Thanks for visiting my website!"
+    "* If you were wondering, this website was made using Next.js, React, TypeScript, Tailwind CSS, and shadcn/ui.",
+    "* My skills include full-stack web development and UI/UX design. I am also currently looking for work!",
+    "* Want to learn more about me? Just select 'About Me' below!",
+    "* If you are interested in seeing my projects, click on 'Projects'!",
+    "* Feel free to contact me below as well!",
+    "* Oh, and click on the glowing golden button to see my resume.",
+    "* Thanks for visiting my website! :)"
   ]
 
-  const evilDialogues = ["why...", "WHY DID YOU CLICK THE BUTTON!?!?", "I told you not to... Hurry and go back!"]
+  const evilDialogues = ["Why did you click the button!?!?", "I told you not to click it......", "Hurry and go back!"]
 
   const typeText = useCallback(() => {
     const currentDialogue = evilMode ? evilDialogues[evilStage] : dialogues[currentTextIndex]

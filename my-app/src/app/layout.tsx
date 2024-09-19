@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Kim's Portfolio!",
+  title: "Andrew Kim",
   description: "",
 };
 
