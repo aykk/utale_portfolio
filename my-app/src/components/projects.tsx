@@ -17,28 +17,28 @@ export function ProjectsComponent() {
       image: "/images/red.png"
     },
     { 
-      name: "Retro Game Engine", 
-      description: "A JavaScript engine for creating 8-bit style browser games.",
+      name: "creditJAM", 
+      description: "Website that curates a custom portfolio of credit cards based on the user's financial background and spending habits.",
       image: "/images/sky.png"
     },
     { 
-      name: "Chiptune Composer", 
-      description: "A web app for composing and sharing 8-bit music tracks.",
+      name: "winsight", 
+      description: "A web-app that uses a trained YOLOv8 model to watch a game of blackjack and make decisions and calculate risk (bust) percentage for the player based on the cards in play.",
       image: "/images/orange.png"
     },
     { 
-      name: "Nostalgia OS", 
-      description: "A Linux distribution styled after classic operating systems.",
+      name: "ELLIS", 
+      description: "A web-app that helps immigrants better understand the legal and cultural differences between the country they are moving from and the United States, translated to their native tongue.",
       image: "/images/green.png"
     },
     { 
-      name: "Retro Social Network", 
-      description: "A social media platform with a 90s aesthetic and features.",
+      name: "Retro Terminals", 
+      description: "Two portfolio templates I made replicating the terminals from Fallout 4 and Alien: Romulus. Comes with a cool, glitchy/retro design and interactivity (power button, terminal commands, etc.) Uses Three.js, Next.js, and React.",
       image: "/images/purple.png"
     },
     { 
-      name: "Pixel Perfect", 
-      description: "A pixel-by-pixel image editor for creating retro-style graphics.",
+      name: "Portfolio", 
+      description: "You are here right now! Inspired by the video game Undertale, this website was built with Next.js, React, Tailwind CSS, and shadcn/ui.",
       image: "/images/blue.png"
     }
   ]

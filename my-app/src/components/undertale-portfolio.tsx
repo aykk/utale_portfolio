@@ -282,7 +282,7 @@ export function UndertalePortfolio({ initialSkipSplash = false }) {
           Contact
         </button>
         <a 
-          href="https://drive.google.com/file/d/1ph89Mg0ZIviaoPFRC4N5H9PrxFWP_J1-/view?usp=sharing" 
+          href="https://drive.google.com/file/d/1Me_lqwDOnApaN0UxzWP5DByBj_EweOu4/view?usp=sharing" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="retro-button gold-button w-32 h-16"
