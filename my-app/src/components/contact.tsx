@@ -28,7 +28,7 @@ export function ContactComponent() {
   }
 
   const handleBackToHome = () => {
-    router.push('/?skipSplash=true')
+    router.push('/?skipSplash=true&from=contact')
   }
 
   return (
@@ -45,7 +45,7 @@ export function ContactComponent() {
         </div>
         
         <div className="flex-1 flex flex-col justify-center">
-          <div className="max-w-2xl w-full mx-auto bg-black p-8 border-2 border-white">
+          <div className="max-w-2xl w-full mx-auto bg-black p-8 border-4 border-white">
             <p className="mb-6 text-xl">* (You encounter a mysterious form. You feel compelled to fill it out...)</p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -102,6 +102,49 @@ export function ContactComponent() {
             {submitMessage && (
               <p className="mt-4 text-xl text-center text-yellow-400">{submitMessage}</p>
             )}
+
+            <div className="mt-8 pt-6 border-t-2 border-white text-xl">
+              <p className="mb-4">* (Or you can reach me directly...)</p>
+              <p className="mb-2">
+                Email:{' '}
+                <a href="mailto:jungmink623@gmail.com" className="retro-link">
+                  jungmink623@gmail.com
+                </a>
+              </p>
+              <p className="mb-2">
+                LinkedIn:{' '}
+                <a
+                  href="https://linkedin.com/in/jungmink623"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="retro-link"
+                >
+                  linkedin.com/in/jungmink623
+                </a>
+              </p>
+              <p className="mb-2">
+                GitHub:{' '}
+                <a
+                  href="https://github.com/aykk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="retro-link"
+                >
+                  github.com/aykk
+                </a>
+              </p>
+              <p>
+                X:{' '}
+                <a
+                  href="https://x.com/tanpoporamen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="retro-link"
+                >
+                  @tanpoporamen
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -118,6 +161,16 @@ export function ContactComponent() {
           border-radius: 0;
         }
         .retro-button:hover {
+          background-color: white;
+          color: black;
+        }
+        .retro-link {
+          color: white;
+          text-decoration: none;
+          border-bottom: 2px solid white;
+          transition: all 0.3s ease;
+        }
+        .retro-link:hover {
           background-color: white;
           color: black;
         }

@@ -1,11 +1,12 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { UndertalePortfolio } from '../components/undertale-portfolio'
+import { Overworld } from '../components/overworld'
 
 export function ClientSideComponent() {
   const searchParams = useSearchParams()
   const skipSplash = searchParams.get('skipSplash') === 'true'
+  const from = searchParams.get('from')
 
-  return <UndertalePortfolio initialSkipSplash={skipSplash} />
+  return <Overworld initialSkipSplash={skipSplash} from={from} />
 }

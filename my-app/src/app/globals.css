@@ -15,9 +15,91 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: #000000;
+  font-family: var(--font-vt323), monospace;
+}
+
+/* ---------------------------------------------------------------------------
+ * Shared Undertale chrome. These used to be duplicated in a <style jsx global>
+ * block inside every page component, which meant four places to keep in sync.
+ * The overworld does not use them at all — it has its own .ut-* classes.
+ * ------------------------------------------------------------------------- */
+
+.ut-panel {
+  background-color: #000000;
+  border: 5px solid #ffffff;
+  border-radius: 0;
+}
+
+.retro-button {
+  background-color: #000000;
+  border: 5px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 24px;
+  line-height: 1.1;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.retro-button:hover,
+.retro-button:focus-visible {
+  background-color: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.retro-button-sm {
+  font-size: 20px;
+  padding: 4px 12px;
+  border-width: 3px;
+}
+
+.retro-link {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px solid #ffffff;
+  transition: all 0.15s ease;
+}
+
+.retro-link:hover,
+.retro-link:focus-visible {
+  background-color: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.retro-input {
+  background-color: #000000;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 12px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 0;
+}
+
+.retro-input:focus,
+.retro-input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* shadcn/ui primitives are markup carriers only; keep their corners square */
+.retro-input[type="text"],
+.retro-input[type="email"],
+textarea.retro-input {
+  border-radius: 0;
+}
+
+.pixelated {
+  image-rendering: pixelated;
 }
 
 @layer utilities {
