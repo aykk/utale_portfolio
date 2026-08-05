@@ -1,0 +1,9 @@
+# agent instructions and design docs — kept local, not tracked
+CLAUDE.md
+DESIGN_SPEC.md
+.claude/
+
+# stray lockfile: there is no package.json at the repo root, the real app is in my-app/
+/package-lock.json
+
+.DS_Store
